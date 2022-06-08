@@ -1,0 +1,19 @@
+{
+  "name": "paulo/dyna-qr-code",
+  "autoload": {
+    "psr-4": {
+      "Paulo\\DynaQrCode\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Paulo Vitor",
+      "email": "paulo19032004@gmail.com"
+    }
+  ],
+  "require": {
+    "bacon/bacon-qr-code": "^2.0",
+    "dasprid/enum": "^1.0",
+    "symfony/polyfill-iconv": "^1.25"
+  }
+}
