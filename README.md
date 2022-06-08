@@ -41,7 +41,8 @@ Para replicar o projeto, siga estas etapas:
 ## ☕ Endpoints
 
 Abaixo estão descritos os endpoints:
-######Endpoints Usuários
+
+###### Endpoints Usuários
 
 - login
 - setuser
@@ -49,7 +50,7 @@ Abaixo estão descritos os endpoints:
 - updateuser
 - deleteuser
 
-######Endpoints QR Codes
+###### Endpoints QR Codes
 
 - getqrcodes
 - setqrcode
@@ -112,9 +113,10 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 ## 😄 Seja um dos contribuidores<br>
 
 Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contribuir.
-
+<!---
 ## 📝 Licença
 
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
+--->
 
 [⬆ Voltar ao topo](#nome-do-projeto)<br>
