@@ -19,7 +19,7 @@ class ApiController {
     public function setEndpoint($endpoint)
     {
 
-        if (in_array($endpoint, array('login', 'setuser', 'getusers', 'updateuser', 'deleteuser', 'myqrcodes', 'insertqrcode', 'updateqrcode', 'deleteqrcode', 'redirect'))) {
+        if (in_array($endpoint, array('login', 'setuser', 'getusers', 'updateuser', 'deleteuser', 'getqrcodes', 'setqrcode', 'updateqrcode', 'deleteqrcode', 'redirect'))) {
             $this->endpoint = $endpoint;
         } else {
             

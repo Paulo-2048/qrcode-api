@@ -22,7 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 switch ($controller->getEndpoint()) {
     case 'login':
-        $response = $userDb->loginUser($data->email, $data->pass);
+        $response = array(
+            'token' => $userDb->loginUser($data->email, $data->pass)
+        );
         break;
     case 'setuser':
         $newUser = new Users($data->name, $data->email, $data->pass);
@@ -37,7 +39,9 @@ switch ($controller->getEndpoint()) {
         }
         break;
     case 'getusers':
-        $response = $userDb->selectAllUsers();
+        $response =array(
+            'data' => $userDb->selectAllUsers()
+        );
         break;
     case 'updateuser':
         if ($userDb->updateUser($data->id, $data->column, $data->value)) {
@@ -61,7 +65,7 @@ switch ($controller->getEndpoint()) {
             );
         }
         break;
-    case 'myqrcodes':
+    case 'getqrcodes':
         $return = $qrCodeDb->selectQrCodeByUserToken($data->token);
         print_r($return[0]);
         $response = [];
@@ -77,7 +81,7 @@ switch ($controller->getEndpoint()) {
             array_push($response, $qrCode);
         }
         break;
-    case 'insertqrcode':
+    case 'setqrcode':
         $newQrCode = new QrCode($data->title, $data->link, $data->token);
         if ($qrCodeDb->inserQrCode($newQrCode)) {
             $response = array(
